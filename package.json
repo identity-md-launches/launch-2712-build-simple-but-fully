@@ -1,0 +1,31 @@
+{
+  "name": "squeekyield",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run abi && next build",
+    "abi": "node scripts/export-abi.mjs",
+    "typecheck": "tsc --noEmit",
+    "preview": "npx --yes serve@14 dist -l 4173",
+    "test:contracts": "cd contracts && forge test"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^4.4.0",
+    "@tanstack/react-query": "^5.105.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "viem": "^2.57.13",
+    "wagmi": "^3.7.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}
